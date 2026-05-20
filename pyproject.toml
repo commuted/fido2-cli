@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fido2-demo-cli"
+name = "fido2-cli"
 version = "0.1.0"
 description = "A complete shell-based FIDO2/WebAuthn demo application"
 readme = "README.md"

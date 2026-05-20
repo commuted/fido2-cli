@@ -1,10 +1,10 @@
-# FIDO2 Demo CLI
+# FIDO2 CLI
 
 A complete shell-based FIDO2/WebAuthn demo application for learning and testing FIDO2 authentication flows.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Tests](https://github.com/yourusername/fido2-demo-cli/actions/workflows/test.yml/badge.svg)](https://github.com/yourusername/fido2-demo-cli/actions/workflows/test.yml)
+[![Tests](https://github.com/commuted/fido2-cli/actions/workflows/test.yml/badge.svg)](https://github.com/commuted/fido2-cli/actions/workflows/test.yml)
 
 ## Features
 
@@ -26,14 +26,14 @@ A complete shell-based FIDO2/WebAuthn demo application for learning and testing 
 ### From PyPI (when published)
 
 ```bash
-pip install fido2-demo-cli
+pip install fido2-cli
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/fido2-demo-cli.git
-cd fido2-demo-cli
+git clone https://github.com/commuted/fido2-cli.git
+cd fido2-cli
 pip install -e .
 ```
 
@@ -167,7 +167,7 @@ pytest --cov=src/fido2_demo --cov-report=html
 ### Project Structure
 
 ```
-fido2-demo-cli/
+fido2-cli/
 ├── src/
 │   └── fido2_demo/
 │       ├── __init__.py
