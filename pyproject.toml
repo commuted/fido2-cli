@@ -40,9 +40,9 @@ dev = [
 fido2-demo = "fido2_demo.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/fido2-demo-cli"
-Repository = "https://github.com/yourusername/fido2-demo-cli"
-Issues = "https://github.com/yourusername/fido2-demo-cli/issues"
+Homepage = "https://github.com/commuted/fido2-cli"
+Repository = "https://github.com/commuted/fido2-cli"
+Issues = "https://github.com/commuted/fido2-cli/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/fido2_demo"]
