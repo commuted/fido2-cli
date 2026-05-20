@@ -1,8 +1,8 @@
 """
-FIDO2 Demo CLI - A complete shell-based FIDO2/WebAuthn demo application.
+FIDO2 CLI - Shell-based FIDO2/WebAuthn utility for testing and learning.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .cli import (
     main,
@@ -10,9 +10,8 @@ from .cli import (
     load_credentials,
     save_credentials,
     check_resident_key_support,
-    RP_ID,
-    RP_NAME,
-    CREDENTIALS_FILE,
+    DEFAULT_RP_ID,
+    DEFAULT_CREDENTIALS_FILE,
     PIN_MAX_ATTEMPTS,
 )
 
@@ -22,8 +21,7 @@ __all__ = [
     "load_credentials",
     "save_credentials",
     "check_resident_key_support",
-    "RP_ID",
-    "RP_NAME",
-    "CREDENTIALS_FILE",
+    "DEFAULT_RP_ID",
+    "DEFAULT_CREDENTIALS_FILE",
     "PIN_MAX_ATTEMPTS",
 ]

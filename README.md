@@ -17,7 +17,7 @@ A complete shell-based FIDO2/WebAuthn demo application for learning and testing 
 
 ## Requirements
 
-- Python 3.9 or higher
+- Python 3.10 or higher
 - A FIDO2 compatible authenticator (YubiKey, SoloKey, etc.)
 - Linux: `udev` rules for USB HID access (see below)
 
@@ -70,24 +70,50 @@ Log out and back in for group changes to take effect.
 
 ## Usage
 
-Run the demo:
+### Subcommands (non-interactive)
 
 ```bash
-fido2-demo
+# Register a new credential
+fido2-cli register alice
+fido2-cli register alice --discoverable --key-name "YubiKey 5"
+
+# Authenticate
+fido2-cli auth alice
+fido2-cli passwordless
+
+# Manage credentials
+fido2-cli list
+fido2-cli delete alice
+fido2-cli delete alice --key-index 2
+fido2-cli delete alice --all
+
+# Device and PIN
+fido2-cli device
+fido2-cli pin set
+fido2-cli pin change
 ```
 
-Or run directly:
+### Global options
 
 ```bash
-python -m fido2_demo.cli
+fido2-cli --rp-id example.com --origin https://example.com register alice
+fido2-cli --credentials /path/to/creds.json list
 ```
 
-### Menu Options
+Credentials are stored in `~/.config/fido2-cli/credentials.json` by default.
+
+### Interactive mode
+
+Run without a subcommand to launch the interactive menu:
+
+```bash
+fido2-cli
+```
 
 ```
-===============================================
-       FIDO2 DEMO APPLICATION
-===============================================
+==================================================
+       FIDO2 CLI
+==================================================
 
   [1] Authenticate (with username)
   [2] Passwordless Login (discoverable)
@@ -104,14 +130,10 @@ python -m fido2_demo.cli
 ### Quick Start
 
 1. **Insert your security key**
-2. **Run `fido2-demo`**
-3. **Register a new credential** (Option 3)
-   - Enter a username and display name
+2. **Register:** `fido2-cli register alice`
    - Choose whether to make it a discoverable credential
    - Tap your key when prompted
-4. **Authenticate** (Option 1 or 2)
-   - For option 1: Enter your username, then tap
-   - For option 2: Just tap (requires discoverable credential)
+3. **Authenticate:** `fido2-cli auth alice` or `fido2-cli passwordless`
 
 ### Multi-Key Support
 
