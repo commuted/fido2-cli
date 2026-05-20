@@ -28,5 +28,5 @@ separate from your main `fido2-cli` credential store.
 ## Requirements
 
 - A connected FIDO2 authenticator (YubiKey, SoloKey, etc.)
-- `fido2-cli` installed (`pip install fido2-cli`) **or** run from the repo root
+- `fido2-cli` installed (`pip install -e .` from the repo root) **or** run directly from the repo
 - Linux: udev rules for USB HID access (see the main [README](../../README.md))
