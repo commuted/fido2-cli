@@ -23,12 +23,6 @@ A complete shell-based FIDO2/WebAuthn demo application for learning and testing 
 
 ## Installation
 
-### From PyPI (when published)
-
-```bash
-pip install fido2-cli
-```
-
 ### From Source
 
 ```bash
